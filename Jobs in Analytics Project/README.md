@@ -1,3 +1,3 @@
-# Jobs in Analytics
+# Jobs in Analytics Project
 
 ## Overview
