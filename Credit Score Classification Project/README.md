@@ -1,9 +1,10 @@
-# **Credit Score Classification System**
+# Credit Score Classification System
+
 **Team:** Credit-Connoisseurs
 
 (Divisha Jain, Erika Brittingham, Majd Soueid, Naveen Parthasarathy, Vamsi Kethepalli)
 
-# **Table of Contents**
+# Table of Contents
 
 [1. Introduction](#_toc1407427700)
 
@@ -112,13 +113,13 @@ For the categorical variables, we filled the missing values form the same custom
 
 **Categorical Variables**
 
-| **Sr.no.** | **Variable** | **Categories**                                               | **Null Values** | **Arbitrary values**                            |
-|------------|--------------|--------------------------------------------------------------|-----------------|-------------------------------------------------|
-| **1**      | Credit Score | 3 Categories: a) Standard – 53% b) Good – 29% c) Poor – 17%  | None            | NA                                              |
-| **2**      | Name         | 10139 unique values                                          | 15000           | NA                                              |
-| **3**      | SSN          | 12501 unique SSN                                             | 8400            | Garbage value \#F%\$D@\*&8 replaced with NAN    |
-| **4**      | Occupation   | 16 unique occupations                                        | 10500           | Garbage value ----------------replaced with NAN |
-| **5**      | Credit Mix   | 3 unique values                                              | 30000           | Garbage value ----------------replaced with NAN |
+| **Sr.no.** | **Variable** | **Categories**                                              | **Null Values** | **Arbitrary values**                            |
+|------------|--------------|-------------------------------------------------------------|-----------------|-------------------------------------------------|
+| **1**      | Credit Score | 3 Categories: a) Standard – 53% b) Good – 29% c) Poor – 17% | None            | NA                                              |
+| **2**      | Name         | 10139 unique values                                         | 15000           | NA                                              |
+| **3**      | SSN          | 12501 unique SSN                                            | 8400            | Garbage value \#F%\$D@\*&8 replaced with NAN    |
+| **4**      | Occupation   | 16 unique occupations                                       | 10500           | Garbage value ----------------replaced with NAN |
+| **5**      | Credit Mix   | 3 unique values                                             | 30000           | Garbage value ----------------replaced with NAN |
 
 \*\*
 
@@ -141,10 +142,7 @@ For the numerical variables, we filled the missing values form the same customer
 | **4**      | Interest Rate       | Interest rate ranges from 1% to 34% after removing outliers                                           | 15000           |
 | **5**      | Delay from Due Date | Delay from due date is concentrated between 0 to 30 days.                                             | 8400            |
 
-![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 004](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/d533fe61-b515-4010-a288-ba09db3bc44f)
-![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 005](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/33111464-60e1-4586-92d1-7aea7706c500)
-![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 006](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/1978d2bc-a014-490f-a06c-b4ce74c53fc7)
-![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 007](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/b876b86b-4a29-43af-9812-443d1506273e)
+![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 004](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/d533fe61-b515-4010-a288-ba09db3bc44f) ![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 005](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/33111464-60e1-4586-92d1-7aea7706c500) ![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 006](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/1978d2bc-a014-490f-a06c-b4ce74c53fc7) ![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 007](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/b876b86b-4a29-43af-9812-443d1506273e)
 
 \*\*
 
@@ -167,7 +165,6 @@ The first model is a decision tree model that uses the following variables -
 The accuracy and classification report of the best model are given below -
 
 ![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 008](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/9f707370-ccd9-4ea1-b742-9615a0886360)
-
 
 ### 4.2 Model 2 – Decision Tree + K-Fold Cross-validation + OvO
 
