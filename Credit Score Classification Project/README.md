@@ -1,6 +1,9 @@
 # **Credit Score Classification System**
+**Team:** Credit-Connoisseurs
 
-**Table of Contents**
+(Divisha Jain, Erika Brittingham, Majd Soueid, Naveen Parthasarathy, Vamsi Kethepalli)
+
+# **Table of Contents**
 
 [1. Introduction](#_toc1407427700)
 
@@ -43,10 +46,6 @@
 [6. Problems Faced](#_toc909881040)
 
 [7. Conclusion](#_toc1182650953)
-
-**Team:** Credit-Connoisseurs
-
-(Divisha Jain, Erika Brittingham, Majd Soueid, Naveen Parthasarathy, Vamsi Kethepalli)
 
 ## 1. Introduction
 
