@@ -6,47 +6,47 @@
 
 # Table of Contents
 
-[1. Introduction](#_toc1407427700)
+1. Introduction
 
-[2. Data Set Information](#_toc1807099182)
+2. Data Set Information
 
-[2.1 Data Source](#_toc607411185)
+2.1 Data Source
 
-[2.2 Data Attributes](#_toc1108615863)
+2.2 Data Attributes
 
-[2.3 Data Preprocessing](#_toc1314330668)
+2.3 Data Preprocessing
 
-[3. Problem Statement](#_toc1315845450)
+3. Problem Statement
 
-[4. Feature Selection and Initial Modeling](#_toc596365634)
+4. Feature Selection and Initial Modeling
 
-[4.1 Model 1 – Decision Tree + K-Fold Cross Validation](#_toc1370604414)
+4.1 Model 1 – Decision Tree + K-Fold Cross Validation
 
-[4.2 Model 2 – Decision Tree + K-Fold Cross-validation](#_toc18119917)
+4.2 Model 2 – Decision Tree + K-Fold Cross-validation
 
-[4.3 Model 3 – DBSCAN Clustering](#_toc1784192246)
+4.3 Model 3 – DBSCAN Clustering
 
-[5. Additional Modeling](#_toc342678127)
+5. Additional Modeling
 
-[5.1 Transforming Features and Creating Dummy Variables](#_toc1854749707)
+5.1 Transforming Features and Creating Dummy Variables
 
-[5.1.1 Occupation](#_toc1432911139)
+5.1.1 Occupation
 
-[5.1.2 Payment Behavior](#_toc67340017)
+5.1.2 Payment Behavior
 
-[5.1.3 Credit Score](#_toc646038258)
+5.1.3 Credit Score
 
-[5.1.4 Payment of Minimum Amount](#_toc956217890)
+5.1.4 Payment of Minimum Amount
 
-[5.2 Correlation Matrix to Check for Correlations](#_toc184216784)
+5.2 Correlation Matrix to Check for Correlations
 
-[5.3 Model Features](#_toc57342825)
+5.3 Model Features
 
-[5.4 K-Means Modeling](#_toc2103032329)
+5.4 K-Means Modeling
 
-[6. Problems Faced](#_toc909881040)
+6. Problems Faced
 
-[7. Conclusion](#_toc1182650953)
+7. Conclusion
 
 ## 1. Introduction
 
