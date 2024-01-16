@@ -10,43 +10,43 @@
 
 2. Data Set Information
 
-2.1 Data Source
+    2.1. Data Source
 
-2.2 Data Attributes
+    2.2. Data Attributes
 
-2.3 Data Preprocessing
+    2.3. Data Preprocessing
 
 3. Problem Statement
 
 4. Feature Selection and Initial Modeling
 
-4.1 Model 1 – Decision Tree + K-Fold Cross Validation
+    4.1. Model 1 – Decision Tree + K-Fold Cross Validation
 
-4.2 Model 2 – Decision Tree + K-Fold Cross-validation
+    4.2. Model 2 – Decision Tree + K-Fold Cross-validation
 
-4.3 Model 3 – DBSCAN Clustering
+    4.3. Model 3 – DBSCAN Clustering
 
 5. Additional Modeling
 
-5.1 Transforming Features and Creating Dummy Variables
+    5.1. Transforming Features and Creating Dummy Variables
 
-5.1.1 Occupation
+    * Occupation
 
-5.1.2 Payment Behavior
+    * Payment Behavior
 
-5.1.3 Credit Score
+    * Credit Score
 
-5.1.4 Payment of Minimum Amount
+    * Payment of Minimum Amount
 
-5.2 Correlation Matrix to Check for Correlations
+    5.2. Correlation Matrix to Check for Correlations
 
-5.3 Model Features
+    5.3. Model Features
 
-5.4 K-Means Modeling
+    5.4. K-Means Modeling
 
-6. Problems Faced
+7. Problems Faced
 
-7. Conclusion
+8. Conclusion
 
 ## 1. Introduction
 
