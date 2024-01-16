@@ -91,11 +91,9 @@ The dataset for this project consists of two main components:
 -   Payment_behaviour – Text, represents overall payment behavior,ex. Low_spent_Large_value_payments
 -   Monthly_balance – Monthly balance amount of the customer, ex. 290.55939
 
-\*\*
 
 ### 2.3 Data Preprocessing
 
-\*\*
 
 The project began with an exploratory data analysis (EDA) phase to gain insights into the dataset. Following the EDA, the data cleaning process involved handling missing values, removing duplicates, and addressing any inconsistencies or errors in the dataset. Additionally, data transformation techniques were employed to prepare the data for modeling, including feature scaling and encoding categorical variables.
 
@@ -121,17 +119,10 @@ For the categorical variables, we filled the missing values form the same custom
 | **4**      | Occupation   | 16 unique occupations                                       | 10500           | Garbage value ----------------replaced with NAN |
 | **5**      | Credit Mix   | 3 unique values                                             | 30000           | Garbage value ----------------replaced with NAN |
 
-\*\*
-
 ![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 002](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/ce9a3c97-fddd-4c4a-9855-a05516cc3c99)
-
-\*\*
-
 ![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 003](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/3b490d8c-e090-4fb7-8074-12c01d0038a2)
 
-\*\*
-
-For the numerical variables, we filled the missing values form the same customer id and used mean value for any other remaining missing values. Below table represents some important features and graphical representation. \*\*\*\*\*\*\*\*
+For the numerical variables, we filled the missing values form the same customer id and used mean value for any other remaining missing values. Below table represents some important features and graphical representation. 
 
 |            |                     | **Numerical Variables**                                                                               |                 |
 |------------|---------------------|-------------------------------------------------------------------------------------------------------|-----------------|
@@ -143,8 +134,6 @@ For the numerical variables, we filled the missing values form the same customer
 | **5**      | Delay from Due Date | Delay from due date is concentrated between 0 to 30 days.                                             | 8400            |
 
 ![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 004](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/d533fe61-b515-4010-a288-ba09db3bc44f) ![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 005](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/33111464-60e1-4586-92d1-7aea7706c500) ![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 006](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/1978d2bc-a014-490f-a06c-b4ce74c53fc7) ![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 007](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/b876b86b-4a29-43af-9812-443d1506273e)
-
-\*\*
 
 ## 3. Problem Statement
 
@@ -198,7 +187,7 @@ Dummy variables for Occupation were created to facilitate their integration into
 
 The 'Payment_Behaviour' column in the dataset underwent a transformation to enhance its suitability for analytical purposes. The original values, denoting distinct payment behaviors associated with varying levels of spending and transaction values, were converted into numerical categories for simplicity and improved interpretability. Specifically, the transformation involved the substitution of the following values:
 
-` `- 'Low_spent_Small_value_payments' with '1'
+\- 'Low_spent_Small_value_payments' with '1'
 
 \- 'Low_spent_Medium_value_payments' with '2'
 
@@ -242,55 +231,55 @@ The model incorporates a diverse set of features designed to capture various dim
 
 **Demographic Information:**
 
-`  `- Age
+` Age `
 
 **Financial Attributes:**
 
-`  `- Annual Income
+`Annual Income`
 
-`  `- Number of Delayed Payments
+`Number of Delayed Payments` 
 
-`  `- Credit History Age
+`Credit History Age` 
 
-`  `- Payment of Minimum Amount
+`Payment of Minimum Amount`
 
-`  `- Delay from Due Date
+`Delay from Due Date `
 
-`  `- Payment Behavior
+`Payment Behavior`
 
-`  `- Monthly Balance
+`Monthly Balance`
 
 **Occupation Details:**
 
-`  `- Occupation_Accountant
+`Occupation_Accountant`
 
-`  `- Occupation_Architect
+`Occupation_Architect`
 
-`  `- Occupation_Developer
+`Occupation_Developer` 
 
-`  `- Occupation_Doctor
+`Occupation_Doctor`
 
-`  `- Occupation_Engineer
+`Occupation_Engineer`
 
-`  `- Occupation_Entrepreneur
+`Occupation_Entrepreneur`
 
-`  `- Occupation_Journalist
+`Occupation_Journalist`
 
-`  `- Occupation_Lawyer
+`Occupation_Lawyer`
 
-`  `- Occupation_Manager
+`Occupation_Manager`
 
-`  `- Occupation_Mechanic
+`Occupation_Mechanic`
 
-`  `- Occupation_Media_Manager
+`Occupation_Media_Manager` 
 
-`  `- Occupation_Musician
+`Occupation_Musician`
 
-`  `- Occupation_Scientist
+`Occupation_Scientist`
 
-`  `- Occupation_Teacher
+`Occupation_Teacher` 
 
-`  `- Occupation_Writer
+`Occupation_Writer`
 
 ### 5.4 K-Means Modeling
 
