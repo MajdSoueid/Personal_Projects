@@ -1,48 +1,48 @@
-**Credit Score Classification System**
+# **Credit Score Classification System**
 
 **Table of Contents**
 
-[1. Introduction 3](#_toc1407427700)
+[1. Introduction](#_toc1407427700)
 
-[2. Data Set Information 3](#_toc1807099182)
+[2. Data Set Information](#_toc1807099182)
 
-[2.1 Data Source 3](#_toc607411185)
+[2.1 Data Source](#_toc607411185)
 
-[2.2 Data Attributes 3](#_toc1108615863)
+[2.2 Data Attributes](#_toc1108615863)
 
-[2.3 Data Preprocessing 4](#_toc1314330668)
+[2.3 Data Preprocessing](#_toc1314330668)
 
-[3. Problem Statement 6](#_toc1315845450)
+[3. Problem Statement](#_toc1315845450)
 
-[4. Feature Selection and Initial Modeling 7](#_toc596365634)
+[4. Feature Selection and Initial Modeling](#_toc596365634)
 
-[4.1 Model 1 – Decision Tree + K-Fold Cross Validation 7](#_toc1370604414)
+[4.1 Model 1 – Decision Tree + K-Fold Cross Validation](#_toc1370604414)
 
-[4.2 Model 2 – Decision Tree + K-Fold Cross-validation + OvO 7](#_toc18119917)
+[4.2 Model 2 – Decision Tree + K-Fold Cross-validation](#_toc18119917)
 
-[4.3 Model 3 – DBSCAN Clustering 8](#_toc1784192246)
+[4.3 Model 3 – DBSCAN Clustering](#_toc1784192246)
 
-[5. Additional Modeling 9](#_toc342678127)
+[5. Additional Modeling](#_toc342678127)
 
-[5.1 Transforming Features and Creating Dummy Variables 9](#_toc1854749707)
+[5.1 Transforming Features and Creating Dummy Variables](#_toc1854749707)
 
-[5.1.1 Occupation 9](#_toc1432911139)
+[5.1.1 Occupation](#_toc1432911139)
 
-[5.1.2 Payment Behavior 9](#_toc67340017)
+[5.1.2 Payment Behavior](#_toc67340017)
 
-[5.1.3 Credit Score 10](#_toc646038258)
+[5.1.3 Credit Score](#_toc646038258)
 
-[5.1.4 Payment of Minimum Amount 10](#_toc956217890)
+[5.1.4 Payment of Minimum Amount](#_toc956217890)
 
-[5.2 Correlation Matrix to Check for Correlations 10](#_toc184216784)
+[5.2 Correlation Matrix to Check for Correlations](#_toc184216784)
 
-[5.3 Model Features 11](#_toc57342825)
+[5.3 Model Features](#_toc57342825)
 
-[5.4 K-Means Modeling 12](#_toc2103032329)
+[5.4 K-Means Modeling](#_toc2103032329)
 
-[6. Problems Faced 13](#_toc909881040)
+[6. Problems Faced](#_toc909881040)
 
-[7. Conclusion 13](#_toc1182650953)
+[7. Conclusion](#_toc1182650953)
 
 **Team:** Credit-Connoisseurs
 
@@ -78,18 +78,9 @@ The dataset for this project consists of two main components:
 -   Interest_Rate – Number representing the interest rate on the card, ex.6
 -   Num_of_Loan – Text representing the number of loans taken from the bank
 -   Type_of_Loan – Comma separated text list representing the types of loan taken by the person, ex. Home Equity Loan, Auto Loan
--   Delay_from_due_date – The average number of days delayed from the payment date, ex.
-
-3
-
--   Num_of_delayed_payment – Text, average number of payments delayed by a person, ex.
-
-7
-
--   Changed_credit_limit – Text, represents the percentage change in credit card limit, ex.
-
-13.27
-
+-   Delay_from_due_date – The average number of days delayed from the payment date, ex.3
+-   Num_of_delayed_payment – Text, average number of payments delayed by a person, ex.7
+-   Changed_credit_limit – Text, represents the percentage change in credit card limit, ex.13.27
 -   Num_credit_inquiries – Number, represents the number of credit card inquiries, ex. 4.0
 -   Credit_mix – Text, represents the clasification of the mix of credits, ex. Good, Standard
 -   Outstanding_Debt - Text, represents the remaining debt to be pai in USD, ex. 548.2 • Credit_utilization_ratio – Represents the utilization ratio of credit cards, numeric, ex. 38.0135424...
@@ -130,11 +121,15 @@ For the categorical variables, we filled the missing values form the same custom
 | **4**      | Occupation   | 16 unique occupations                                        | 10500           | Garbage value ----------------replaced with NAN |
 | **5**      | Credit Mix   | 3 unique values                                              | 30000           | Garbage value ----------------replaced with NAN |
 
-![A bar graph with different colored squares
+\*\*
 
-Description automatically generated](Aspose.Words.ab1f4a21-7e90-49f0-a2e8-3851889b9f33.002.jpeg) ![A graph of various numbers and colors
+![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 002](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/ce9a3c97-fddd-4c4a-9855-a05516cc3c99)
 
-Description automatically generated with medium confidence](Aspose.Words.ab1f4a21-7e90-49f0-a2e8-3851889b9f33.003.jpeg)
+\*\*
+
+![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 003](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/3b490d8c-e090-4fb7-8074-12c01d0038a2)
+
+\*\*
 
 For the numerical variables, we filled the missing values form the same customer id and used mean value for any other remaining missing values. Below table represents some important features and graphical representation. \*\*\*\*\*\*\*\*
 
@@ -147,17 +142,10 @@ For the numerical variables, we filled the missing values form the same customer
 | **4**      | Interest Rate       | Interest rate ranges from 1% to 34% after removing outliers                                           | 15000           |
 | **5**      | Delay from Due Date | Delay from due date is concentrated between 0 to 30 days.                                             | 8400            |
 
-![A graph of income distribution
-
-Description automatically generated](Aspose.Words.ab1f4a21-7e90-49f0-a2e8-3851889b9f33.004.jpeg) ![A graph of numbers and numbers
-
-Description automatically generated with medium confidence](Aspose.Words.ab1f4a21-7e90-49f0-a2e8-3851889b9f33.005.jpeg)
-
-![A graph of credit card distribution
-
-Description automatically generated](Aspose.Words.ab1f4a21-7e90-49f0-a2e8-3851889b9f33.006.jpeg) ![A graph of a number of records
-
-Description automatically generated](Aspose.Words.ab1f4a21-7e90-49f0-a2e8-3851889b9f33.007.jpeg)
+![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 004](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/d533fe61-b515-4010-a288-ba09db3bc44f)
+![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 005](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/33111464-60e1-4586-92d1-7aea7706c500)
+![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 006](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/1978d2bc-a014-490f-a06c-b4ce74c53fc7)
+![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 007](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/b876b86b-4a29-43af-9812-443d1506273e)
 
 \*\*
 
@@ -179,7 +167,8 @@ The first model is a decision tree model that uses the following variables -
 
 The accuracy and classification report of the best model are given below -
 
-![](Aspose.Words.ab1f4a21-7e90-49f0-a2e8-3851889b9f33.008.png)
+![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 008](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/9f707370-ccd9-4ea1-b742-9615a0886360)
+
 
 ### 4.2 Model 2 – Decision Tree + K-Fold Cross-validation + OvO
 
@@ -187,13 +176,13 @@ OvO, or One vs One classification, is a technique to handle multi class classifi
 
 The performance has only slightly increased.
 
-![](Aspose.Words.ab1f4a21-7e90-49f0-a2e8-3851889b9f33.009.png)
+![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 009](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/bee11bb0-4998-48d6-8031-3398324404b8)
 
 ### 4.3 Model 3 – DBSCAN Clustering
 
 We also experimented using DBSCAN to see if there were any naturally forming, density based clusters. From the results, DBSCAN did not seem a appropriate use case -
 
-![](Aspose.Words.ab1f4a21-7e90-49f0-a2e8-3851889b9f33.010.png)
+![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 010](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/136df81e-1b68-4c95-b7f7-a8d810f1a54c)
 
 Results persisted to be unusable with hyperparameter tuning as well.
 
@@ -203,13 +192,13 @@ Results persisted to be unusable with hyperparameter tuning as well.
 
 ### 5.1.1 Occupation
 
-![](Aspose.Words.ab1f4a21-7e90-49f0-a2e8-3851889b9f33.011.png)
+![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 011](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/f313a211-7943-41bf-b312-d6d358deab53)
 
 Dummy variables for Occupation were created to facilitate their integration into the model, enabling an examination of how Occupation impacts Credit Score.
 
 ### 5.1.2 Payment Behavior
 
-![](Aspose.Words.ab1f4a21-7e90-49f0-a2e8-3851889b9f33.012.png)
+![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 012](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/18a200ef-8a49-434c-b84c-3c64303e8e35)
 
 The 'Payment_Behaviour' column in the dataset underwent a transformation to enhance its suitability for analytical purposes. The original values, denoting distinct payment behaviors associated with varying levels of spending and transaction values, were converted into numerical categories for simplicity and improved interpretability. Specifically, the transformation involved the substitution of the following values:
 
@@ -229,13 +218,13 @@ This numeric representation facilitates seamless integration into analytical mod
 
 ### 5.1.3 Credit Score
 
-![](Aspose.Words.ab1f4a21-7e90-49f0-a2e8-3851889b9f33.013.png)
+![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 013](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/eeb3f8de-7bef-45a6-8dfc-b14bfa856875)
 
 The target feature, 'Credit_Score,' has undergone a series of transformations to facilitate its integration into analytical models. Categorical labels were replaced with numerical representations, with 'Good' mapped to '3,' 'Standard' to '2,' and 'Poor' to '1.' Subsequently, the 'Credit_Score' column was converted to a numeric data type.
 
 ### 5.1.4 Payment of Minimum Amount
 
-![](Aspose.Words.ab1f4a21-7e90-49f0-a2e8-3851889b9f33.014.png)
+![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 014](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/3d51054d-d04c-4231-a38e-3a97d2ba74c9)
 
 Additionally, the 'Payment_of_Min_Amount' variable underwent a similar transformation. 'NM' was replaced with '0,' 'Yes' with '1,' and 'No' with '2.' Following this, the 'Payment_of_Min_Amount' column was also converted to a numeric data type.
 
@@ -243,7 +232,7 @@ These transformations are integral to the analytical process, providing a numeri
 
 ### 5.2 Correlation Matrix to Check for Correlations
 
-![](Aspose.Words.ab1f4a21-7e90-49f0-a2e8-3851889b9f33.015.png)
+![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 015](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/8e49eb9d-0fb8-4e11-b9d2-8d13b8e27220)
 
 Credit History Age and Outstanding Debt are Highly Corelated
 
@@ -311,13 +300,13 @@ The model incorporates a diverse set of features designed to capture various dim
 
 We employed the Elbow Method to determine the most suitable number of clusters for our analysis. Although the method suggested an optimal K value, namely K = 3, in line with our three credit score classes, we intentionally chose this value based on our prior knowledge.
 
-![](Aspose.Words.ab1f4a21-7e90-49f0-a2e8-3851889b9f33.016.png)
+![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 016](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/e9cb20a2-16c2-44c6-a175-923052046750)
 
 Subsequently, we reran the KMeans algorithm with K = 3, utilizing the obtained clusters for further analysis. To simplify the data and aid interpretation, we applied Principal Component Analysis (PCA). This method allowed us to transform the original features into a more straightforward representation while maintaining the essential information.
 
 Following these steps, we visualized the clusters in a reduced two-dimensional space using a scatter plot. Each point on the plot represents an observation, and the colors indicate the assigned clusters determined by the KMeans algorithm. This visual representation provides insights into the grouping patterns of our data in a more accessible format.
 
-![](Aspose.Words.ab1f4a21-7e90-49f0-a2e8-3851889b9f33.017.png)
+![Aspose Words ab1f4a21-7e90-49f0-a2e8-3851889b9f33 017](https://github.com/MajdSoueid/Personal_Projects/assets/122302207/6d1a1ddb-2ce2-4bb7-8cfe-5b05bc8e5dd4)
 
 Clear distinction between clusters, which is great for our data because it represents the 3 different classess of credit score.
 
